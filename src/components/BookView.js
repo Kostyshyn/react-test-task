@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card } from 'react-materialize';
+import { Button } from 'react-materialize';
 
 
 class BookView extends Component {
@@ -12,7 +12,10 @@ class BookView extends Component {
   render() {
   	console.log(this.props.match.params.id)
     return (
-      <h1>Book! { this.props.book.name } number { this.props.match.params.id }</h1>
+    	<div>
+      		<h1>Book! { this.props.match.params.id }</h1>
+      		<Button waves='light'>Edit</Button>
+      	</div>
     );
   }
 }

@@ -3,6 +3,12 @@
   margin: 0 auto;
   padding: 20px;
 }
+.paginator {
+	display: flex;
+}
+.paginator .col.s12 {
+	width: auto;
+}
 
 @media only screen and (max-width: 600px) {
 	.wrapper {

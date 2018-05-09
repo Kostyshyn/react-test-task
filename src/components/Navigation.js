@@ -1,10 +1,10 @@
 import React from 'react';
-import { Navbar, NavItem } from 'react-materialize';
+import { Navbar } from 'react-materialize';
+import { Link } from 'react-router-dom';
 
-const Navigation = ({  }) => (
+const Navigation = ({ props }) => (
 	<Navbar>
-		<NavItem onClick={() => console.log('test click')}>Getting started</NavItem>
-		<NavItem href=''>Components</NavItem>
+		<li><Link to='/books'>All books</Link></li>
 	</Navbar>
 );
 

@@ -10,7 +10,7 @@ class BookView extends Component {
     }
   }
   render() {
-  	console.log(this.props.match.params.id)
+  	// console.log(this.props.match.params.id)
     return (
     	<div>
       		<h1>Book! { this.props.match.params.id }</h1>

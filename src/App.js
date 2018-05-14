@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import './App.css';
 
 import { Route } from 'react-router-dom';
-
-import data from './data.js';
 
 import BooksList from './components/BooksList';
 import Navigation from './components/Navigation';
@@ -18,13 +17,14 @@ class App extends Component {
     }
   }
   render() {
+    console.log(this.props.store)
     return (
       <div>
         <Navigation />
         <div className='wrapper'>
 
-          <Route path='/' exact strict render={ ({ props }) => ( <BooksList books={ data } /> ) } />
-          <Route path='/books' exact render={ ({ props }) => ( <BooksList books={ data } /> ) } />
+          <Route path='/' exact strict render={ ({ props }) => ( <BooksList /> ) } />
+          <Route path='/books' exact render={ ({ props }) => ( <BooksList /> ) } />
           <Route path='/books/:id' exact strict component={ BookView } />
 
         </div>
@@ -33,5 +33,5 @@ class App extends Component {
   }
 }
 
-export default App
+export default connect(state => ({ store: state }), dispatch => ({}))(App);
 
